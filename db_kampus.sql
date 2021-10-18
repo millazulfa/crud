@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Okt 2021 pada 13.37
+-- Waktu pembuatan: 18 Okt 2021 pada 10.05
 -- Versi server: 10.4.18-MariaDB
 -- Versi PHP: 8.0.3
 
@@ -32,15 +32,18 @@ CREATE TABLE `mahasiswa` (
   `nim` varchar(8) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
-  `pekerjaan` varchar(50) NOT NULL
+  `pekerjaan` varchar(50) NOT NULL,
+  `foto` text CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `alamat`, `pekerjaan`) VALUES
-(1, '12201176', 'Milla Zulfa Fitriani Sudirman', 'mangkubumi', 'mahasiswa');
+INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `alamat`, `pekerjaan`, `foto`) VALUES
+(1, '12201176', 'Milla Zulfa Fitriani Sudirman', 'mangkubumi', 'mahasiswa', 'images/EmC_-94UYAEs0zw.jpg'),
+(3, '12201176', 'Milla', 'mangkubumi', 'mahasiswa', 'images/8d856d73c15c6281d004b33f291412bf-removebg-preview.png'),
+(4, '12201176', 'zulfa', 'mks', 'mahasiswa', 'images/3ae10c2e92d7eba0a4dca12aba23beda-removebg-preview.png');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +63,7 @@ ALTER TABLE `mahasiswa`
 -- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
